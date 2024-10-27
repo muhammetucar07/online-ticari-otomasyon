@@ -1,0 +1,14 @@
+Kategori 
+Ürünler
+Personel
+Cari
+Satış_Hareket
+Kasa_Hareket
+Fatura
+Fatura Kalem
+Admin
+Tür
+Stok_Kartları
+Departman
+Giderler
+İş_Emir

@@ -1,0 +1,12 @@
+Microsoft.EntityFrameworkCore, 
+Microsoft.EntityFrameworkCore.SqlServer,
+Microsoft.EntityFrameworkCore.Tools
+
+
+Install-Package Microsoft.EntityFrameworkCore -Version 8.0.10
+Install-Package Microsoft.EntityFrameworkCore.Tools -Version 8.0.10
+Install-Package Microsoft.EntityFrameworkCore.Design -Version 8.0.10
+
+
+Add-Migration InitialCreate
+Update-Database
