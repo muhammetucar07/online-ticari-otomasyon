@@ -1,3 +1,15 @@
+/* _content/online-ticari-otomasyon/Views/Category/Index.cshtml.rz.scp.css */
+body[b-csscsmv5ll] {
+    background-color: #f0f0f0 !important;
+}
+h1[b-csscsmv5ll] {
+    color: red;
+}
+
+p[b-csscsmv5ll] {
+    font-size: 20px;
+    color: blue;
+}
 /* _content/online-ticari-otomasyon/Views/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */

@@ -1,0 +1,19 @@
+﻿@model online_ticari_otomasyon.Models.Class.Categories;
+
+@{
+    ViewData["Title"] = "CategoryAdd";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+</br>
+<h1>CategoryAdd</h1>
+</br>
+
+<form method="post" asp-action="CategoryAdd" class="form-group">
+
+    @Html.LabelFor(x => x.CategoryName)
+    @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+    </br>
+
+    <button type="submit" class="btn btn-info">Kaydet</button>
+
+</form>

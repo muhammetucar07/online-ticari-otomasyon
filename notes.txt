@@ -1,0 +1,23 @@
+ 
+ layout ---> Sabit kısım
+ layout içerisine gelecek alanın ismi content
+ content geleceği yerin adı -->  @RenderBody() komutu ile belirliyoruz
+ @RenderBody() -- > Diğer sayfalardan gelecek değerler burada yazılır(Değişen kısım)
+
+
+ View içerisinde html kodları haricinde kod kullanma için Başına'@' Sembolü eklememiz gerekiyor
+ 	@if  
+
+Tilde işareti alt + ü 	
+
+var değişkeni --> Bütün değişkenlerin türünü alıyor( Aritmetik bir ifade olabilir, Karakteristik bir ifade olabilir, Boolean, Ondalıklı olabilir)
+
+Html Helper
+@model online_ticari_otomasyon.Models.Class.Categories;
+@Html.LabelFor(x => x.CategoryName)
+@html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+
+
+asp-controller="Category": CategoryController'a yönlendirme yapar.
+asp-action="CategoryDelete": CategoryDelete metodunu çağırır.
+asp-route-id="@k.CategoryID": CategoryID değerini CategoryDelete metoduna id parametresi olarak geçirir.

@@ -1,0 +1,11 @@
+﻿body {
+    background-color: #f0f0f0 !important;
+}
+h1 {
+    color: red;
+}
+
+p {
+    font-size: 20px;
+    color: blue;
+}

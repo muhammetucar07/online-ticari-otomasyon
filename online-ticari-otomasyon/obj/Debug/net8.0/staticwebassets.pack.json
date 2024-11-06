@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\online-ticari-otomasyon.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\ucar\\source\\repos\\online-ticari-otomasyon\\online-ticari-otomasyon\\wwwroot\\css\\adminlayout.css",
+      "PackagePath": "staticwebassets\\css\\adminlayout.css"
+    },
+    {
       "Id": "C:\\Users\\ucar\\source\\repos\\online-ticari-otomasyon\\online-ticari-otomasyon\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

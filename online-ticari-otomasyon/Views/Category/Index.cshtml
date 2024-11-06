@@ -1,0 +1,43 @@
+﻿@using online_ticari_otomasyon.Models.Class
+@model List<Categories>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+ 
+<h1>Index Burası Kategori</h1>
+
+<p>Bu paragrafa farklı bir stil uygulayarak deneme yapabilirsiniz.</p>
+
+<table class="table table-bordered" style="margin-top:20px">
+    <tr>
+        <th>Id</th>
+        <th>Kategori Adı</th>   
+        <th>Sil</th>
+        <th>Güncelle</th>   
+    </tr>
+    @foreach (var k in Model)
+    {
+        <tr>
+            <td>@k.CategoryID</td>
+            <td>@k.CategoryName</td>
+            <!--<td><a href="@Url.Action("CategoryDelete", "Category", new { id = k.CategoryID })" class="btn btn-danger">Sil</a></td>-->
+            <td><a asp-controller="Category" asp-action="CategoryDelete" asp-route-id="@k.CategoryID" class="btn btn-danger">Sil</a></td>
+            <td><a href="@Url.Action("CategoryUpdate", "Category", new { id = k.CategoryID })" class="btn btn-info">Güncelle</a></td>
+        </tr>
+    }
+ 
+    
+</table>
+ 
+<a href="@Url.Action("CategoryAdd", "Category")" class="btn btn-primary">Yeni Kategori</a>
+
+<!-- Compare this snippet from online-ticari-otomasyon/Views/Category/CategoryAdd.cshtml: -->
+
+<!-- 
+    asp-controller="Category": CategoryController'a yönlendirme yapar.
+    asp-action="CategoryDelete": CategoryDelete metodunu çağırır.
+    asp-route-id=" (et)k.CategoryID": CategoryID değerini CategoryDelete metoduna id parametresi olarak geçirir. 
+ 
+ -->

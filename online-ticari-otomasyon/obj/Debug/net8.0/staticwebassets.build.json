@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qpC/M/raqF8zEOKUfTzWQMrPV8pMOcFMX0E9fJq36xk=",
+  "Hash": "1tZrTyV9NiKRmly/O3ukNUns8tb6F6RL/F9RxJXfpu4=",
   "Source": "online-ticari-otomasyon",
   "BasePath": "_content/online-ticari-otomasyon",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\ucar\\source\\repos\\online-ticari-otomasyon\\online-ticari-otomasyon\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\online-ticari-otomasyon.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\ucar\\source\\repos\\online-ticari-otomasyon\\online-ticari-otomasyon\\wwwroot\\css\\adminlayout.css",
+      "SourceId": "online-ticari-otomasyon",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ucar\\source\\repos\\online-ticari-otomasyon\\online-ticari-otomasyon\\wwwroot\\",
+      "BasePath": "_content/online-ticari-otomasyon",
+      "RelativePath": "css/adminlayout.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\adminlayout.css"
     },
     {
       "Identity": "C:\\Users\\ucar\\source\\repos\\online-ticari-otomasyon\\online-ticari-otomasyon\\wwwroot\\css\\site.css",

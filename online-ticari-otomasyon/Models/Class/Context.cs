@@ -4,9 +4,12 @@ namespace online_ticari_otomasyon.Models.Class
 {
     public class Context: DbContext 
     {
+
+        
         public Context(DbContextOptions<Context> options) : base(options)
         {
         }
+        
         // DbSet --> Tablo Bazlı çalışıyoruz.
         // property(değişken) yada sütun adı bazlı çalışmıyoryoruz
         public DbSet<Admin> Admins { get; set; }
