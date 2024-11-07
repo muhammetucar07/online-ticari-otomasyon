@@ -24,7 +24,7 @@
             <td>@k.CategoryName</td>
             <!--<td><a href="@Url.Action("CategoryDelete", "Category", new { id = k.CategoryID })" class="btn btn-danger">Sil</a></td>-->
             <td><a asp-controller="Category" asp-action="CategoryDelete" asp-route-id="@k.CategoryID" class="btn btn-danger">Sil</a></td>
-            <td><a href="@Url.Action("CategoryUpdate", "Category", new { id = k.CategoryID })" class="btn btn-info">Güncelle</a></td>
+            <td><a href="@Url.Action("CategoryGet", "Category", new { id = k.CategoryID })" class="btn btn-info">Güncelle</a></td>
         </tr>
     }
  

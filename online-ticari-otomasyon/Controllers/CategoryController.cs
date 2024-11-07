@@ -41,5 +41,20 @@ namespace online_ticari_otomasyon.Controllers
             }
             return RedirectToAction("Index");
         }
+
+        public IActionResult CategoryGet(int id)
+        {
+            var category = _context.Categoriess.Find(id);
+            return View("CategoryGet", category);
+        }
+
+        public IActionResult CategoryUpdate(Categories categories)
+        {
+            var category = _context.Categoriess.Find(categories.CategoryID);
+            category.CategoryName = categories.CategoryName;
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
     }
 }
