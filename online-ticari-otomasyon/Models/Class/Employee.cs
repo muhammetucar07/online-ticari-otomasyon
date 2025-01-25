@@ -32,6 +32,9 @@ namespace online_ticari_otomasyon.Models.Class
         [StringLength(250)]
         public string EmployeeImage { get; set; }
         public ICollection<Sales> Saless { get; set; }
-        public Department Department { get; set; }
+
+
+        public int DepartmentID { get; set; }
+        public virtual Department Department { get; set; }
     }
 }

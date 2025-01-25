@@ -1,0 +1,46 @@
+﻿@using online_ticari_otomasyon.Models.Class;
+@model List<Sales>
+
+@{
+    ViewData["Title"] = "DepartmentEmployeeSaless";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h1>Department Employee Saless</h1>
+<br />
+
+<ol class="breadcrumb mb-4">
+     <li class="breadcrumb-item active">Employee Name: @ViewBag.d</li>
+</ol>
+
+<br />
+
+<table class="table table-condensed">
+    <tr>
+        <th>Satış Id</th>
+        <th>Ürün Adı</th>
+        <th>Cari</th>
+        <th>Fiyat</th>
+        <th>Adet</th>
+        <th>Toplam</th>
+        <th>Tarih</th>
+        <th>Yazdır</th>
+    </tr>
+
+    @foreach (var k in Model)
+    {
+        <tr>
+            <td>@k.SalesID</td>
+            <td>@(k.Product != null ? k.Product.ProductName : "Ürün Bulunamadı")</td>
+            <td>@(k.Current != null ? $"{k.Current.CurrentName} {k.Current.CurrentSurname}" : "Cari Bulunamadı")</td>
+            <td>@k.Price</td>
+            <td>@k.Amount</td>
+            <td>@k.Total</td>
+            <td>@k.Date</td>
+            <td><a href="@Url.Action("Print", "Sales", new { id = k.SalesID })" class="btn btn-default" style="background-color:dodgerblue">Yazdır</a></td>
+        </tr>
+    }
+
+</table>
+

@@ -1,0 +1,20 @@
+﻿@model online_ticari_otomasyon.Models.Class.Department;
+@{
+    ViewData["Title"] = "DepartmentAdd";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+</br>
+<h1>DepartmentAdd</h1>
+</br>
+
+<form method="post" asp-action="DepartmentAdd" class="form-group">
+
+    @Html.LabelFor(x => x.DepartmentName)
+    @Html.TextBoxFor(x => x.DepartmentName, new { @class = "form-control" })
+    </br>
+
+    <button type="submit" class="btn btn-info">Kaydet</button>
+
+</form>
+

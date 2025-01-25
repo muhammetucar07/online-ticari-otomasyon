@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("online-ticari-otomasyon")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a41a475c748fb0de179904afcc08fceb80d30d3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+776bc46850259160d8492a2b804143efa77f0ab3")]
 [assembly: System.Reflection.AssemblyProductAttribute("online-ticari-otomasyon")]
 [assembly: System.Reflection.AssemblyTitleAttribute("online-ticari-otomasyon")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

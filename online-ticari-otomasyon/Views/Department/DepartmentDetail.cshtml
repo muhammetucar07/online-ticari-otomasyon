@@ -1,0 +1,51 @@
+﻿@using online_ticari_otomasyon.Models.Class
+@model List<Employee>
+
+@{
+    ViewData["Title"] = "DepartmentDetail";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+
+<h1>Department Detail</h1>
+
+<br />
+
+
+
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Department Name: @ViewBag.d</li>
+
+</ol>
+
+<br />
+
+<table class="table table-bordered" style="margin-top:20px">
+    <tr>
+        <th>Personel Id</th>
+        <th>Personel Name</th>
+        <th>Personel Surname</th>
+        <th>Personel City</th>
+        <th>Personel Mail</th>
+        <th>Personel Image</th>       
+        <th>Personel Job</th>
+        <th>Satışlar</th>
+     </tr>
+
+     @foreach (var k in Model)
+     {
+            <tr>
+                <td>@k.EmployeeID</td>
+                <td>@k.EmployeeName</td>
+                <td>@k.EmployeeSurname</td>
+                <td>@k.EmployeeCity</td>
+                <td>@k.EmployeeEmail</td>
+                <td>>@k.EmployeeImage</td>
+                <td>@k.EmployeeJob</td>
+            <td><a href="@Url.Action("DepartmentEmployeeSaless", "Department", new { id = k.EmployeeID })" class="btn btn-success">Satışlar</a></td>
+            </tr>
+     }
+
+
+
+</table>

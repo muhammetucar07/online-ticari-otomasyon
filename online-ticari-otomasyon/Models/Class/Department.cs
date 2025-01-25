@@ -11,6 +11,7 @@ namespace online_ticari_otomasyon.Models.Class
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
         public string DepartmentName { get; set; }
+        public bool Status { get; set; } = true;
         public ICollection<Employee> Employees { get; set; }
     }
 }

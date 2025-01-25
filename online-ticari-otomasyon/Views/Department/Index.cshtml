@@ -1,0 +1,36 @@
+﻿@using online_ticari_otomasyon.Models.Class
+@model List<Department>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Index Burası Department</h1>
+
+ 
+
+<table class="table table-bordered" style="margin-top:20px">
+    <tr>
+        <th>Id</th>
+        <th>Department Adı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+    </tr>
+    @foreach (var k in Model)
+    {
+        <tr>
+            <td>@k.DepartmentID</td>
+            <td>@k.DepartmentName</td>
+            <td><a asp-controller="Department" asp-action="DepartmentDelete" asp-route-id="@k.DepartmentID" class="btn btn-danger">Sil</a></td>
+            <td><a href="@Url.Action("DepartmentGet", "Department", new { id = k.DepartmentID })" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="@Url.Action("DepartmentDetail", "Department", new { id = k.DepartmentID })" class="btn btn-success" style="background-color:lightcoral; color:white">Detaylar</a></td>
+            
+        </tr>
+    }
+
+
+</table>
+
+<a href="@Url.Action("DepartmentAdd", "Department")" class="btn btn-info" style="background-color:yellowgreen;">Yeni Department</a>
+

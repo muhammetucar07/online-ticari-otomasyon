@@ -28,15 +28,15 @@ namespace online_ticari_otomasyon.Models.Class
         // Foreign Key tanımları
         public int ProductID { get; set; }
         [ForeignKey("ProductID")]
-        public Product Product { get; set; }
+        public virtual Product Product { get; set; }
 
         public int CurrentID { get; set; }
         [ForeignKey("CurrentID")]
-        public Current Current { get; set; }
+        public virtual Current Current { get; set; }
 
         public int EmployeeID { get; set; }
         [ForeignKey("EmployeeID")]
-        public Employee Employee { get; set; }
+        public virtual Employee Employee { get; set; }
 
 
 
