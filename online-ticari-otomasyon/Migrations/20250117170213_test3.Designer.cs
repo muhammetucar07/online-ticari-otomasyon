@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using online_ticari_otomasyon.Models.Class;
 
@@ -11,9 +12,11 @@ using online_ticari_otomasyon.Models.Class;
 namespace online_ticari_otomasyon.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20250117170213_test3")]
+    partial class test3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -335,9 +338,6 @@ namespace online_ticari_otomasyon.Migrations
                     b.Property<int>("CurrentID")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
-
                     b.Property<int>("EmployeeID")
                         .HasColumnType("int");
 
@@ -349,16 +349,17 @@ namespace online_ticari_otomasyon.Migrations
 
                     b.Property<string>("SalesClient")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("Varchar");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SalesProduct")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("Varchar");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Total")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("date")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("SalesID");
 

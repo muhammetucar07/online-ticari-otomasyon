@@ -10,3 +10,54 @@ Install-Package Microsoft.EntityFrameworkCore.Design -Version 8.0.10
 
 Add-Migration InitialCreate
 Update-Database
+
+
+
+Genel Olarak Veritabanını Güncelleme Adımları
+1. Migrations (Göçler) Özelliğini Projeye Dahil Etmek
+Eğer projenizde EF Core kullanıyorsanız, EF Core Tools’u yüklemeniz gerekir. Bunun için şu komutu çalıştırabilirsiniz:
+
+ 
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+2. İlk Migration’ı Oluşturmak (Eğer Yoksa)
+Eğer daha önce migration yapmadıysanız, projenizde ilk migration’ı oluşturmanız gerekir:
+
+ 
+dotnet ef migrations add InitialCreate
+Bu komut, Migrations adında bir klasör oluşturur ve veritabanının ilk yapısını temsil eden bir migration dosyası ekler.
+
+3. Yeni Değişiklikleri Migration’a Eklemek
+Modelde herhangi bir değişiklik yaptıktan sonra, bu değişiklikleri migration dosyasına eklemek için şu komutu kullanın:
+
+ 
+dotnet ef migrations add MigrationName
+Örneğin, CategoryID özelliğini Product sınıfına eklediğinizde:
+
+ 
+dotnet ef migrations add AddCategoryIDToProduct
+Bu, model değişikliklerini içeren bir migration dosyası oluşturur.
+
+
+dotnet ef migrations list
+dotnet ef database update PreviousMigrationName
+dotnet ef database drop
+
+
+
+Mevcut Migration’ları Listeleme 
+ - dotnet ef migrations list
+
+Son Migration’ı Geri Alma 
+ - dotnet ef database update PreviousMigrationName
+
+Veritabanını Sıfırlama Eğer veritabanını tamamen sıfırlamak isterseniz:
+ - dotnet ef database drop
+
+Migration’ı Silme Eğer yanlış bir migration oluşturduysanız, migration dosyasını silin ve şu komutu çalıştırın:
+ - dotnet ef migrations remove
+
+
+dotnet ef migrations remove
+dotnet ef database drop
+dotnet ef migrations add InitialCreate
+dotnet ef database update

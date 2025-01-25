@@ -8,7 +8,7 @@ namespace online_ticari_otomasyon.Models.Class
         public int InvoiceID { get; set; }
 
         [Column(TypeName = "Char")]
-        [StringLength(1)]        
+        [StringLength(1)]
         public string InvoiceSerialNo { get; set; }
 
         [Column(TypeName = "Varchar")]

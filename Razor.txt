@@ -1,0 +1,122 @@
+Razor, ASP.NET Core ve ASP.NET MVC'de kullanılan bir view engine (görünüm motoru)'dur. HTML içinde C# kodu yazmaya olanak tanır ve dinamik web sayfaları oluşturmayı sağlar. Razor, sunucu tarafında çalışarak C# kodlarını işleyip dinamik HTML çıktısı üretir.
+
+
+Razor, ASP.NET Core ve ASP.NET MVC'de kullanılan bir view engine (görünüm motoru)'dur. HTML içinde C# kodu yazmaya olanak tanır ve dinamik web sayfaları oluşturmayı sağlar. Razor, sunucu tarafında çalışarak C# kodlarını işleyip dinamik HTML çıktısı üretir.
+
+Razor'ın Temel Özellikleri:
+ 1. Kolay Kullanım:
+    * C# kodlarını doğrudan HTML içinde yazabilirsiniz.
+    * Kodu daha okunabilir ve temiz hale getirir.
+ 2. Hızlı ve Hafif:
+	* Razor, klasik ASP'nin <% %> syntax'ına göre daha performanslıdır.
+	* Kodlar, web sunucusu tarafından derlenerek çalıştırılır.
+ 3. Model Bağlantısı (Model Binding):
+
+	* @model ifadesi ile bir model sınıfı sayfaya bağlanabilir.
+	* Model içindeki verilere erişerek dinamik HTML çıktıları üretilebilir.
+ 4. Kod/İçerik Ayrımı:
+
+	* Razor, HTML ve C# kodlarını ayırmayı kolaylaştırır.
+	* Frontend ve backend işlevleri arasında net bir ayrım sunar.
+ 5. MVC ve Blazor ile Kullanılabilir:
+
+	* ASP.NET MVC projelerinde *.cshtml uzantılı dosyalarda kullanılır.
+	* ASP.NET Core Blazor ile de kullanılabilir.
+
+
+Razor Syntax'ı ve Kullanımı
+ 1. C# Kod Yazımı
+	Razor'da C# kodu yazmak için @ sembolü kullanılır: 
+
+	<p>Bugünün tarihi: @DateTime.Now.ToString("dd/MM/yyyy")</p>
+	
+	Çıktı:
+		<p>Bugünün tarihi: 25/01/2025</p>
+
+
+ 2. Koşullu İfadeler (If-Else)
+ 
+	@if (DateTime.Now.Hour < 12)
+	{
+	    <p>Günaydın!</p>
+	}
+	else
+	{
+	    <p>İyi günler!</p>
+	}
+
+
+ 3. Döngüler (Loops)
+ 
+	<ul>
+	    @for (int i = 1; i <= 5; i++)
+	    {
+	        <li>Öğe @i</li>
+	    }
+	</ul>
+
+	Çıktı: 
+		<ul>
+		    <li>Öğe 1</li>
+		    <li>Öğe 2</li>
+		    <li>Öğe 3</li>
+		    <li>Öğe 4</li>
+		    <li>Öğe 5</li>
+		</ul>
+
+ 4. Model Kullanımı
+	Bir model sınıfı bağlamak ve içindeki verilere erişmek:
+
+	@model online_ticari_otomasyon.Models.Class.Product
+
+	<h2>@Model.ProductName</h2>
+	<p>Fiyat: @Model.Price TL</p>
+
+ 5. Listelerle Çalışma (Foreach Döngüsü)
+
+	Bir liste içindeki verileri döngüyle göstermek:
+
+		@model List<string>
+
+		<ul>
+		    @foreach (var item in Model)
+		    {
+		        <li>@item</li>
+		    }
+		</ul>
+		Eğer model şu şekilde verilirse:
+
+		List<string> categories = new List<string> { "Elektronik", "Giyim", "Mobilya" };
+		Çıktı:
+		<ul>
+		    <li>Elektronik</li>
+		    <li>Giyim</li>
+		    <li>Mobilya</li>
+		</ul>
+ 6. HTML Helper Kullanımı
+	ASP.NET MVC'de HTML yardımcı fonksiyonları ile form öğeleri oluşturulabilir:
+		@Html.TextBox("username", null, new { @class = "form-control" })
+		@Html.Label("username", "Kullanıcı Adı")
+
+ 7. Tag Helpers (ASP.NET Core için)
+	ASP.NET Core projelerinde Razor'ın bir başka özelliği Tag Helpers'tır:
+
+	<input asp-for="Email" class="form-control" />
+	<span asp-validation-for="Email" class="text-danger"></span>
+
+
+ Razor View Dosya Türleri
+
+ 1. *.cshtml (C# tabanlı Razor)
+	ASP.NET Core ve MVC projelerinde kullanılır.
+	Örnek dosya adı: Index.cshtml
+
+ 2. *.vbhtml (VB.NET tabanlı Razor)
+	VB.NET dili için geliştirilmişti, ancak artık yaygın olarak kullanılmaz.
+
+
+Avantajları:
+- HTML ve C# kodlarını karıştırarak okunabilirlik sağlar.
+- Kodu dinamik hale getirir (veritabanından veya API'den gelen verilerle).
+- Küçük ve performanslıdır, hızlı derlenir.
+- Model, View ve Controller (MVC) yapısına kolayca entegre edilir.

@@ -28,13 +28,13 @@ namespace online_ticari_otomasyon.Controllers
         {
             _context.Categoriess.Add(categories);
             _context.SaveChanges();
-            return RedirectToAction("Index");            
+            return RedirectToAction("Index");
         }
 
         public IActionResult CategoryDelete(int id)
         {
             var category = _context.Categoriess.Find(id);
-            if (category != null) 
+            if (category != null)
             {
                 _context.Categoriess.Remove(category);
                 _context.SaveChanges();

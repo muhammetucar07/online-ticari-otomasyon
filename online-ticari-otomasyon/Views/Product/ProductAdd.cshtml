@@ -1,0 +1,59 @@
+﻿@model online_ticari_otomasyon.Models.Class.Product;
+
+@{
+    ViewData["Title"] = "ProductAdd";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h2>Yeni Ürün Sayfası</h2>
+<br />
+<form method="post" asp-action="ProductAdd" class="form-group">
+    @Html.LabelFor(x => x.ProductName)
+    @Html.TextBoxFor(x => x.ProductName, new { @class = "form-control" })
+
+    </br>
+
+    @Html.LabelFor(x => x.Brand)
+    @Html.TextBoxFor(x => x.Brand, new { @class = "form-control" })
+
+    </br>
+
+    @Html.LabelFor(x => x.Stock)
+    @Html.TextBoxFor(x => x.Stock, new { @class = "form-control" })
+
+    </br>
+
+    @Html.LabelFor(x => x.PurchasePrice)
+    @Html.TextBoxFor(x => x.PurchasePrice, new { @class = "form-control" })
+
+    </br>
+
+    @Html.LabelFor(x => x.SalePrice)
+    @Html.TextBoxFor(x => x.SalePrice, new { @class = "form-control" })
+
+    </br>
+
+
+    @Html.LabelFor(x => x.Status)
+    @Html.TextBoxFor(x => x.Status, new { @class = "form-control" })
+
+    </br>
+
+    @Html.LabelFor(x => x.Image)
+    @Html.TextBoxFor(x => x.Image, new { @class = "form-control" })
+
+    </br>
+
+    @Html.LabelFor(x => x.CategoryID)
+    @* @Html.TextBoxFor(x => x.CategoryID, new { @class = "form-control" }) *@
+    @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.v1, new { @class = "form-control" })
+
+    </br>
+
+    <button class="btn btn-primary">Kaydet</button>
+
+
+
+
+
+
+</form>
